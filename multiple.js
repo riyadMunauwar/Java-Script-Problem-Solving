@@ -1,12 +1,23 @@
-function multipleOf(value, limit){
+function multipleOf(value, target){
+  let multiple = 0;
+  
   for(let i = 1; true ; i++){
     
-    if(i * value > limit) break;
+    multiple = i + value;
     
-    console.log(i * value)
+    if(multiple > target) break;
+    
+    
+    if(multiple === target) return true;
+    
+    
     
   }
+  
+  return false;
 }
 
 
-multipleOf(3, 100)
+var res = multipleOf(3, 95)
+
+console.log(res);
